@@ -11,18 +11,18 @@
 			{% for entry in craft.entries.section('blog').limit(10).all() %}
 
 			<div class="post-preview">
-				<p class="post-meta text-center">
+				<p class="post-meta text-center text-muted">
 					{{ entry.postDate | date('l d. F Y') }} 
 				</p>
-				<a href="{{ entry.url }}" class="text-info">
-					<h2 class="title text-center mb-4">
+				<a href="{{ entry.url }}" class="text-dark">
+					<div class="display-4 text-center mb-4">
 						{{ entry.title }}
-					</h2>
+					</div>
 				</a>
 				<img src="{{ entry.fremhevetBilde.one.getUrl(resize) }}" class="img-fluid"> 
 				{{ entry.blogPost }}
 				<p class="post-meta">
-					Skrevet av <a href="#"> {{ entry.author }}</a> 
+					Skrevet av <a href="#" class="text-info"> {{ entry.author }}</a> 
 				</p>
 			</div>
 			<hr>
