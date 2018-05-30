@@ -1,0 +1,24 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			<p class="post-meta text-center">
+				{{ entry.postDate | date('l d. F Y') }} 
+			</p>
+			<h2 class="title text-center mb-4">
+				{{ entry.title }}
+			</h2>
+			{{ entry.blogPost }}
+
+			<p class="post-meta mt-5">
+				Skrevet av <a href="#"> {{ entry.author }}</a> 
+			</p>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

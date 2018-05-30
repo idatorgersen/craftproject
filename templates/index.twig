@@ -1,1 +1,29 @@
-Hjemmeside
+{% extends "layout.twig" %}
+{% block content %}
+
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-8 mx-auto">
+			{% for entry in craft.entries.section('blog').limit(10).all() %}
+
+			<div class="post-preview">
+				<p class="post-meta text-center">
+					{{ entry.postDate | date('l d. F Y') }} 
+				</p>
+				<a href="{{ entry.url }}">
+					<h2 class="title text-center mb-4">
+						{{ entry.title }}
+					</h2>
+				</a>
+				{{ entry.blogPost }}
+				<p class="post-meta">
+					Skrevet av <a href="#"> {{ entry.author }}</a> 
+				</p>
+			</div>
+			<hr>
+			{% endfor %}
+
+		</div>
+	</div>
+</div>
+{% endblock %}
