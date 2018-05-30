@@ -1,4 +1,8 @@
 {% extends "layout.twig" %}
+{% set resize = {
+	mode: 'crop',
+	width: 730,
+} %}
 {% block content %}
 
 <div class="container mt-5">
@@ -10,11 +14,12 @@
 				<p class="post-meta text-center">
 					{{ entry.postDate | date('l d. F Y') }} 
 				</p>
-				<a href="{{ entry.url }}">
+				<a href="{{ entry.url }}" class="text-info">
 					<h2 class="title text-center mb-4">
 						{{ entry.title }}
 					</h2>
 				</a>
+				<img src="{{ entry.fremhevetBilde.one.getUrl(resize) }}" class="img-fluid"> 
 				{{ entry.blogPost }}
 				<p class="post-meta">
 					Skrevet av <a href="#"> {{ entry.author }}</a> 
