@@ -7,39 +7,56 @@
 
 	<!-- CSS Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	
-
+	<!-- CSS Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
+
 <body>
 	<div class="navbar-dark bg-dark navbar-expand-lg sticky-top">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 mx-auto">
-					<nav class="navbar">
-						<a class="navbar-brand" href="/">Ida Torgersen</a>
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a class="nav-link" href="/">Hjem</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/om">Om</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="/kontakt">Kontakt</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
+		<div class="row">
+			<div class="my-auto inline ml-5">
+				<a href="mailto:ida.torgersen@lyse.net" class="text-light mr-3">
+					<i class="far fa-envelope"></i>
+				</a>
+				<a href="https://www.facebook.com/idatorgersen" class="text-light mr-3">
+					<i class="fab fa-facebook"></i>
+				</a>
+				<a href="https://www.instagram.com/idatorgersen/" class="text-light mr-3">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://www.linkedin.com/in/ida-torgersen/" class="text-light">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</div>
+			<div class="col-md-7 ml-auto">
+				<nav class="navbar">
+					<h3 class="my-0 text-center ml-3 ">
+						<a class="font-weight-light text-light" href="/">Ida Torgersen</a>
+					</h3>
+					<ul class="navbar-nav">
+						<li class="nav-item pr-5">
+							<a class="nav-link" href="/">Hjem</a>
+						</li>
+						<li class="nav-item pr-5">
+							<a class="nav-link" href="/om">Om</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/kontakt">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>
+
 	{% block content %}
 	{% endblock %}
+
 
 	<!-- Scripts Bootstrap -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,13 +1,13 @@
 {% extends "layout.twig" %}
 {% set resize = {
 	mode: 'crop',
-	width: 730,
+	width: 920,
 } %}
 {% block content %}
 
-<div class="container mt-5">
+<div class="container mt-4">
 	<div class="row">
-		<div class="col-md-8 mx-auto">
+		<div class="col-md-10 mx-auto">
 			{% for entry in craft.entries.section('blog').limit(10).all() %}
 
 			<div class="post-preview">
@@ -20,7 +20,7 @@
 					</div>
 				</a>
 				<img src="{{ entry.fremhevetBilde.one.getUrl(resize) }}" class="img-fluid"> 
-				{{ entry.blogPost }}
+					{{ entry.blogPost }}				
 				<p class="post-meta">
 					Skrevet av <a href="#" class="text-info"> {{ entry.author }}</a> 
 				</p>
